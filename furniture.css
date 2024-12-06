@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+body {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+header {
+  background: rgba(226, 226, 226, 1);
+  background: -moz-linear-gradient(
+    left,
+    rgba(226, 226, 226, 1) 0%,
+    rgba(219, 219, 219, 1) 50%,
+    rgba(209, 209, 209, 1) 51%,
+    rgba(254, 254, 254, 1) 100%
+  );
+}
+.nav-information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+.title-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.title-info i {
+  color: green;
+  font-size: 20px;
+}
+.first {
+  font-size: 25px;
+  padding-right: 5px;
+  font-weight: 900;
+  color: green;
+}
+.navbar a {
+  padding-right: 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+.navbar a:hover {
+  color: crimson;
+  font-size: 20px;
+  text-decoration: underline;
+}
+.icon-item {
+  display: flex;
+  font-size: 18px;
+}
+.fa-solid:hover {
+  color: crimson;
+  font-size: 20px;
+  cursor: pointer;
+}
+.fa-solid {
+  margin-left: 8px;
+}
+.first-icon i {
+  margin-right: 5px;
+}
+.home-description {
+  background-image: url(images/banner/banner-one.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.home-description p {
+  width: 500px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  line-height: 30px;
+  padding: 15px 25px;
+  font-size: 20px;
+}
+.home-description h1 {
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  background: rgba(7, 110, 7, 0.414);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+  width: 500px;
+  padding: 15px;
+}
+.home-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  font-size: 30px;
+  color: #008b8b;
+  border-bottom: 2px solid black;
+  padding-bottom: 20px;
+  background-image: url(images/banner/banner-two.jpg);
+  background-size: cover;
+}
+.container-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  font-size: 20px;
+  color: darkgoldenrod;
+  border-bottom: 2px solid black;
+  padding-bottom: 20px;
+}
+
+.card-container {
+  background-color: aliceblue;
+  max-width: 1050;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.image img {
+  width: 300px;
+  height: 200px;
+}
+.card-box {
+  background: #fff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+}
+.card-box:hover {
+  transform: translateY(-5px); /* Lift the card slightly on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+.card-box h4 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.card-box p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.card-box button {
+  font-size: 18px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.card-box button:hover {
+  background-color: rgb(213, 36, 36);
+  color: #fff;
+  font-weight: 800;
+  border: none;
+  transform: translateY(-5px);
+}

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenCraft</title>
+    <link rel="stylesheet" href="furniture.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="nav-information">
+        <div class="title-info">
+          <i class="fa-solid fa-feather"></i>
+          <h4><span class="first">Green</span>Craft</h4>
+        </div>
+        <div class="navbar">
+          <a href="">Home</a>
+          <a href="">Blog</a>
+          <a href="">Service</a>
+          <a href="">Contact</a>
+        </div>
+        <div class="icon-item">
+          <div class="first-icon">
+            <a href="login.html">
+              <i class="fa-solid fa-user"></i>
+            </a>
+          </div>
+          <div class="second-icon">
+            <i id="cart-icon" class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="home-description">
+        <h1>Your One Stop Furniture Solution Partner.</h1>
+        <p>
+          GreenCraft offers quality tables, chairs, and more, meeting the
+          highest standards in affordable home furniture solutions. With over 15
+          years of experience and exceptional craftsmanship, we’re here to
+          elevate your brand to new heights.
+        </p>
+      </div>
+      <div class="home-title">
+        <h1>OUR PRODUCTS</h1>
+      </div>
+
+      <section>
+        <div class="container-title">
+          <h1>HERE IS OUR CHAIR COLLECTIONS</h1>
+        </div>
+        <div class="card-container">
+          <div
+            class="card-box"
+            data-id="1"
+            data-name="China shirt"
+            data-price="5600"
+          >
+            <div class="image">
+              <img src="images/chair/chair-one.jpg" alt="" />
+            </div>
+            <h4>China pure cut chair</h4>
+            <p>5600 taka</p>
+            <button onclick="addToCart(this)">Add Cart</button>
+          </div>
+          <div
+            class="card-box"
+            data-id="2"
+            data-name="China shirt"
+            data-price="5600"
+          >
+            <div class="image">
+              <img src="images/chair/chair-two.jpg" alt="" />
+            </div>
+            <h4>China pure cut chair</h4>
+            <p>5600 taka</p>
+            <button onclick="addToCart(this)">Add Cart</button>
+          </div>
+          <div
+            class="card-box"
+            data-id="3"
+            data-name="China shirt"
+            data-price="5600"
+          >
+            <div class="image">
+              <img src="images/chair/chair-three.jpg" alt="" />
+            </div>
+            <h4>China pure cut chair</h4>
+            <p>5600 taka</p>
+            <button onclick="addToCart(this)">Add Cart</button>
+          </div>
+          <div
+            class="card-box"
+            data-id="4"
+            data-name="China shirt"
+            data-price="5600"
+          >
+            <div class="image">
+              <img src="images/chair/chair-four.jpg" alt="" />
+            </div>
+            <h4>China pure cut chair</h4>
+            <p>5600 taka</p>
+            <button onclick="addToCart(this)">Add Cart</button>
+          </div>
+          <div
+            class="card-box"
+            data-id="5"
+            data-name="China shirt"
+            data-price="5600"
+          >
+            <div class="image">
+              <img src="images/chair/chair-five.jpg" alt="" />
+            </div>
+            <h4>China pure cut chair</h4>
+            <p>5600 taka</p>
+            <button onclick="addToCart(this)">Add Cart</button>
+          </div>
+          <div
+            class="card-box"
+            data-id="6"
+            data-name="China shirt"
+            data-price="5600"
+          >
+            <div class="image">
+              <img src="images/chair/chair-six.jpg" alt="" />
+            </div>
+            <h4>China pure cut chair</h4>
+            <p>5600 taka</p>
+            <button onclick="addToCart(this)">Add Cart</button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container-title">
+          <h1>HERE IS OUR TABLE COLLECTIONS</h1>
+        </div>
+        <div class="card-container">
+          <div
+            class="card-box"
+            data-id="7"
+            data-name="China shirt"
+            data-price="5600"
+          >
+            <div class="image">
+              <img src="images/table/chair-one.jpg" alt="" />
+            </div>
+            <h4>China pure cut chair</h4>
+            <p>5600 taka</p>
+            <button onclick="addToCart(this)">Add Cart</button>
+          </div>
+          <div
+            class="card-box"
+            data-id="8"
+            data-name="China shirt"
+            data-price="5600"
+          >
+            <div class="image">
+              <img src="images/table/table-two.jpg" alt="" />
+            </div>
+            <h4>China pure cut chair</h4>
+            <p>5600 taka</p>
+            <button onclick="addToCart(this)">Add Cart</button>
+          </div>
+          <div
+            class="card-box"
+            data-id="9"
+            data-name="China shirt"
+            data-price="5600"
+          >
+            <div class="image">
+              <img src="images/table/table-three.jpg" alt="" />
+            </div>
+            <h4>China pure cut chair</h4>
+            <p>5600 taka</p>
+            <button onclick="addToCart(this)">Add Cart</button>
+          </div>
+          <div
+            class="card-box"
+            data-id="10"
+            data-name="China shirt"
+            data-price="5600"
+          >
+            <div class="image">
+              <img src="images/table/table-four.jpg" alt="" />
+            </div>
+            <h4>China pure cut chair</h4>
+            <p>5600 taka</p>
+            <button onclick="addToCart(this)">Add Cart</button>
+          </div>
+          <div
+            class="card-box"
+            data-id="11"
+            data-name="China shirt"
+            data-price="5600"
+          >
+            <div class="image">
+              <img src="images/table/table-five.jpg" alt="" />
+            </div>
+            <h4>China pure cut chair</h4>
+            <p>5600 taka</p>
+            <button onclick="addToCart(this)">Add Cart</button>
+          </div>
+          <div
+            class="card-box"
+            data-id="12"
+            data-name="China shirt"
+            data-price="5600"
+          >
+            <div class="image">
+              <img src="images/table/table-six.jpg" alt="" />
+            </div>
+            <h4>China pure cut chair</h4>
+            <p>5600 taka</p>
+            <button onclick="addToCart(this)">Add Cart</button>
+          </div>
+          <div
+            class="card-box"
+            data-id="13"
+            data-name="China shirt"
+            data-price="5600"
+          >
+            <div class="image">
+              <img src="images/table/table-seven.jpg" alt="" />
+            </div>
+            <h4>China pure cut chair</h4>
+            <p>5600 taka</p>
+            <button onclick="addToCart(this)">Add Cart</button>
+          </div>
+          <div
+            class="card-box"
+            data-id="14"
+            data-name="China shirt"
+            data-price="5600"
+          >
+            <div class="image">
+              <img src="images/table/table-eight.jpg" alt="" />
+            </div>
+            <h4>China pure cut chair</h4>
+            <p>5600 taka</p>
+            <button onclick="addToCart(this)">Add Cart</button>
+          </div>
+          <div
+            class="card-box"
+            data-id="15"
+            data-name="China shirt"
+            data-price="5600"
+          >
+            <div class="image">
+              <img src="images/table/table-nine.jpg" alt="" />
+            </div>
+            <h4>China pure cut chair</h4>
+            <p>5600 taka</p>
+            <button onclick="addToCart(this)">Add Cart</button>
+          </div>
+        </div>
+      </section>
+
+      <script src="furniture.js"></script>
+    </main>
+  </body>
+</html>
