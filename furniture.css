@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -39,12 +39,20 @@ header {
   font-weight: 900;
   color: green;
 }
-.navbar a {
+.menu-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+.nav-links a {
   padding-right: 10px;
   text-decoration: none;
   font-size: 18px;
 }
-.navbar a:hover {
+.nav-links a:hover {
   color: crimson;
   font-size: 20px;
   text-decoration: underline;
@@ -63,6 +71,86 @@ header {
 }
 .first-icon i {
   margin-right: 5px;
+} */
+
+/* header */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  width: 100%;
+  background-color: #4caf50;
+}
+
+.nav-information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  position: relative;
+}
+
+.title-info {
+  display: flex;
+  align-items: center;
+}
+
+.title-info i {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
+.title-info h4 {
+  margin: 0;
+}
+
+.title-info .first {
+  color: yellow;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-item i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* main  */
+section {
+  padding: 20px;
+  background-color: #f9f9f9;
 }
 .home-description {
   background-image: url(images/banner/banner-one.jpg);
@@ -73,7 +161,9 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  text-align: center; /* Align text for smaller screens */
 }
+
 .home-description p {
   width: 500px;
   background: rgba(255, 255, 255, 0.7);
@@ -86,10 +176,11 @@ header {
   padding: 15px 25px;
   font-size: 20px;
 }
+
 .home-description h1 {
   font-size: 50px;
   color: rgb(255, 255, 255);
-  background: rgba(7, 110, 7, 0.414);
+  background: rgba(4, 80, 4, 0.696);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
@@ -97,6 +188,7 @@ header {
   width: 500px;
   padding: 15px;
 }
+
 .home-title {
   display: flex;
   justify-content: center;
@@ -108,66 +200,316 @@ header {
   padding-bottom: 20px;
   background-image: url(images/banner/banner-two.jpg);
   background-size: cover;
+  text-align: center; /* Align text for smaller screens */
 }
+
 .container-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px auto;
-  font-size: 20px;
-  color: darkgoldenrod;
-  border-bottom: 2px solid black;
-  padding-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container-title h1 {
+  font-size: 2rem;
+  color: #333;
 }
 
 .card-container {
-  background-color: aliceblue;
-  max-width: 1050;
-  margin: 20px auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-.image img {
-  width: 300px;
-  height: 200px;
-}
 .card-box {
-  background: #fff; /* White background */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-box.hidden {
+  display: none;
+}
+
+.card-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-box .image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-box .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-box h4 {
+  font-size: 1.2rem;
+  color: #4caf50;
+  margin: 10px 0;
+}
+
+.card-box p {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.card-box button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.card-box button:hover {
+  background-color: #45a049;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+#cart-items li {
+  margin-bottom: 10px; /* Add 10px spacing between each item */
+  list-style: none; /* Optional: Removes the bullet point if not needed */
+  padding: 5px 0; /* Add some padding for better spacing */
+  display: flex; /* Align text and button nicely */
+  justify-content: space-between; /* Space out the text and button */
+  align-items: center; /* Vertically center the text and button */
+  border-bottom: 1px solid #ccc; /* Optional: Add a divider for each item */
+}
+.cart-last {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.close-btn {
+  float: right;
+  cursor: pointer;
+  font-size: 24px;
+}
+.remove-btn {
+  margin-left: 10px;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.remove-btn:hover {
+  background-color: darkred;
+}
+.buy-button {
+  margin-left: 10px;
+  color: white;
+  background-color: #008b8b;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+.buy-button:hover {
+  background-color: crimson;
+}
+.special-information {
+  background-image: url(images/banner/banner-two.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.last-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 350px;
+  width: 600px;
+  margin: 0 auto;
+  color: white;
+  font-weight: 600;
+  background: rgba(4, 80, 4, 0.696);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+  padding: 15px;
 }
-.card-box:hover {
-  transform: translateY(-5px); /* Lift the card slightly on hover */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-}
-.card-box h4 {
-  font-size: 25px;
-  margin-bottom: 10px;
-}
-.card-box p {
+.fa-solid {
   font-size: 20px;
-  margin-bottom: 10px;
-}
-.card-box button {
-  font-size: 18px;
-  padding: 10px 15px;
   cursor: pointer;
-  margin-bottom: 10px;
 }
-.card-box button:hover {
-  background-color: rgb(213, 36, 36);
-  color: #fff;
-  font-weight: 800;
+.fa-solid:hover {
+  color: crimson;
+}
+.last-section button {
+  background-color: #05b4d3;
+  color: white;
   border: none;
-  transform: translateY(-5px);
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+.last-section button:hover {
+  background-color: crimson;
+}
+footer {
+  background-image: url(images/banner/banner-three.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+}
+footer i {
+  font-size: 20px;
+  padding-top: 10px;
+}
+/* media queries */
+
+@media (max-width: 540px) {
+  /* header section */
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #4caf50;
+    z-index: 1;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    width: 200px; /* Ensure proper width for smaller screens */
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    text-align: right;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .title-info h4 {
+    font-size: 1.2rem; /* Adjust for smaller screens */
+  }
+
+  .icon-item i {
+    font-size: 1.2rem; /* Adjust icon sizes */
+  }
+
+  .home-description {
+    flex-direction: column; /* Stack elements vertically */
+    height: auto; /* Adjust height to fit content */
+    padding: 20px;
+    z-index: 0;
+  }
+
+  .home-description h1 {
+    font-size: 30px; /* Reduce heading size */
+    width: 100%; /* Full width on smaller screens */
+    padding: 10px;
+  }
+
+  .home-description p {
+    font-size: 16px; /* Reduce paragraph font size */
+    width: 100%; /* Full width on smaller screens */
+    line-height: 24px; /* Adjust line height */
+    padding: 10px 15px;
+  }
+
+  .home-title {
+    font-size: 20px; /* Reduce font size for title */
+    padding-bottom: 15px;
+    background-size: cover;
+    padding: 10px; /* Add padding for better spacing */
+  }
+
+  .container-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr; /* Single column on small screens */
+    gap: 15px;
+  }
+
+  .card-box {
+    margin: 0 auto; /* Center the cards */
+    width: 90%; /* Reduce the card width slightly */
+  }
+
+  .card-box .image {
+    height: 150px; /* Reduce image height for small screens */
+  }
+
+  .card-box h4 {
+    font-size: 1rem;
+  }
+
+  .card-box p {
+    font-size: 0.9rem;
+  }
+
+  .card-box button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+  .last-section {
+    width: 90%; /* Adjust width to be 90% of the screen */
+    margin: 10px; /* Add margin for spacing on smaller screens */
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .special-information {
+    background-size: contain; /* Adjust background image size */
+    background-position: top center; /* Adjust background position */
+  }
+  footer {
+    flex-direction: column;
+  }
 }
